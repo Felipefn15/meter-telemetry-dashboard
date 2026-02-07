@@ -12,22 +12,6 @@ export function ConsumptionChart({ readings }: ConsumptionChartProps) {
   const chartData = readings.map((reading) => ({
     hour: format(parseISO(reading.hour), 'HH:mm'),
     consumption: Number(reading.consumption.toFixed(2)),
-    flag: reading.flag,
-  }));
-
-  const normalData = chartData.map((d) => ({
-    ...d,
-    consumption: d.flag === 'normal' ? d.consumption : 0,
-  }));
-
-  const gapData = chartData.map((d) => ({
-    ...d,
-    consumption: d.flag === 'gap_estimated' ? d.consumption : 0,
-  }));
-
-  const resetData = chartData.map((d) => ({
-    ...d,
-    consumption: d.flag === 'counter_reset' ? d.consumption : 0,
   }));
 
   return (

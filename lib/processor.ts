@@ -1,4 +1,4 @@
-import { parseISO, format, startOfHour, differenceInHours, addHours } from 'date-fns';
+import { parseISO, differenceInHours, addHours } from 'date-fns';
 import type { RawReading, ProcessedReading } from './types';
 
 export function processMeterReadings(
