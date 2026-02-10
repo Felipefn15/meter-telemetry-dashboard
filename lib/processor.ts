@@ -30,7 +30,7 @@ export function processMeterReadings(
       if (currVolume < prevVolume) {
         handleCounterReset(
           meterId,
-          currTimestamp,
+          prevTimestamp,
           currVolume,
           processed
         );

@@ -74,7 +74,7 @@ describe('processMeterReadings', () => {
     expect(result).toHaveLength(1);
     expect(result[0]).toMatchObject({
       meterId: 'MTR-003',
-      hour: "2025-02-05T13:00:00Z",
+      hour: "2025-02-05T12:00:00Z",
       consumption: 45,
       flag: 'counter_reset',
     });
